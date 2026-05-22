@@ -1,0 +1,9 @@
+# Ignore local data subdirectories containing massive structural coordinate files
+extracted_domains/
+results/
+
+# Ignore local hidden Snakemake state caches and Conda environment definitions
+.snakemake/
+
+# Ignore general macOS operating system system artifacts
+.DS_Store
