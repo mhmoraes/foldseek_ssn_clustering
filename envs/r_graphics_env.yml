@@ -1,0 +1,13 @@
+name: r_ssn_graphics
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.3
+  - r-tidyverse>=2.0.0
+  - r-igraph>=1.5.0
+  - r-tidygraph>=1.2.0
+  - r-ggraph>=2.1.0
+  - r-graphlayouts>=1.0.0
+  - r-colorspace>=2.1-0
