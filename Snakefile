@@ -13,7 +13,8 @@ rule all:
         matrix = os.path.join(OUTPUT_DIR, "structural_similarity_matrix.tsv"),
         assignments = os.path.join(OUTPUT_DIR, "optimized_subfamily_assignments.tsv"),
         network_map = os.path.join(OUTPUT_DIR, "optimized_subfamilies_network_map.pdf"),
-        histogram = os.path.join(OUTPUT_DIR, "sequence_identity_distribution.png")
+        histogram = os.path.join(OUTPUT_DIR, "sequence_identity_distribution.png"),
+        rds_object = os.path.join(OUTPUT_DIR, "ssn_graph_object.rds") # ADDED: Live R Graphic Sandbox File
 
 
 rule run_foldseek_alignment:
@@ -46,7 +47,8 @@ rule optimize_and_render_ssn:
     output:
         assignments = os.path.join(OUTPUT_DIR, "optimized_subfamily_assignments.tsv"),
         network_map = os.path.join(OUTPUT_DIR, "optimized_subfamilies_network_map.pdf"),
-        histogram = os.path.join(OUTPUT_DIR, "sequence_identity_distribution.png")
+        histogram = os.path.join(OUTPUT_DIR, "sequence_identity_distribution.png"),
+        rds_object = os.path.join(OUTPUT_DIR, "ssn_graph_object.rds") # ADDED: Passthrough destination flag
     params:
         script = "scripts/optimize_and_render_ssn.R"
     conda:
