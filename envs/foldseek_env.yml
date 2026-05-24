@@ -6,6 +6,7 @@ channels:
 dependencies:
   - python=3.11
   - foldseek>=9.427cf1d
+  - cd-hit>=4.8.1             # ADDED: High-speed sequence clustering engine
   - pandas>=2.1.0
   - numpy>=1.24.0
   - networkx>=3.1
